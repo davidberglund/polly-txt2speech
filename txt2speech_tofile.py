@@ -12,13 +12,19 @@ from tempfile import gettempdir
 session = Session(profile_name="adminuser")
 polly = session.client("polly")
 
+
+phrase_json = {'text': ["Turn off the lights, please."], 'voiceId': ['Salli'], 'outputFormat': ['ogg_vorbis']}
+
+myText = "Alexa, " + phrase_json.get("text")[0]
+myVoiceId = phrase_json.get("voiceId")[0]
+
 #myText="Alexa, what are some of your skills?"
-myText="Turn off the lights, please. And then turn up the music!"
+#myText="Turn off the lights, please. And then turn up the music!"
 #myVoiceId="Brian"
 #myVoiceId="Joey"
 #myVoiceId="Amy"
 #myVoiceId="Salli"
-myVoiceId="Kendra"
+#myVoiceId="Kendra"
 #myVoiceId="Justin"
 
 try:
